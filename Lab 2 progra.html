@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Acerca de mí</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Acerca de mí</h1>
+        <p style="font-size: 30pt;">José Medrano</p>
+    </header>
+
+    <div class="container">
+        <div class="grid-item" id="animal">
+            <h2>Mi animal favorito</h2>
+            <img width="250" height="150" src="https://www.hola.com/horizon/landscape/a71e34a2a6e2-cosassobrepastoraleman-t.jpg?im=Resize=(960),type=downsize" alt="">
+            <p id="mensajeAnimal">Haz clic para saberlo</p>
+            <button onclick="mostrarAnimal()">Ver</button>
+        </div>
+
+        <div class="grid-item" id="comida">
+            <h2>Comida favorita</h2>
+            <img width="250" height="150" src="https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg" alt="">
+            <p id="mensajeComida">Pasa el ratón para saberlo</p>
+        </div>
+
+        <div class="grid-item" id="pelicula">
+            <h2>Película o serie favorita</h2>
+            <img width="250" height="150" src="https://files.mormonsud.org/wp-content/uploads/2023/05/rapidos-y-furiosos-8.jpeg" alt="">
+            <p id="mensajePelicula">Haz doble clic aquí</p>
+        </div>
+
+        <div class="grid-item" id="cancion">
+            <h2>Canción o canciones favoritas</h2>
+            <img width="250" height="150" src="https://media.istockphoto.com/id/1455799854/es/vector/icono-de-l%C3%ADnea-de-nota-musical-dise%C3%B1o-de-boceto-p%C3%ADxel-perfecto-trazo-editable-m%C3%BAsica.jpg?s=612x612&w=0&k=20&c=E068x5cs3yBD3yZUmhuhvaFB0PQOe804dIOmW7gbGPc=" alt="">
+            <p>Rojo-JBalvin</p>
+            <p>Lucid dreams-Juice wrld</p>
+            <p>Moonligth-xxtentation</p>
+        </div>
+
+        <div class="grid-item" id="persona">
+            <h2>Persona que admiro</h2>
+            <img width="250" height="150" src="https://www.forofamilia.org/wp-content/uploads/2017/07/silhouette-1923656_1920-300x200.jpg" alt="">
+            <p id="mensajePersona">Haz clic para conocer más</p>
+            <button onclick="mostrarPersona()">Ver</button>
+        </div>
+
+        <div class="grid-item" id="pais">
+            <h2>País que me gustaría visitar</h2>
+            <img width="250" height="150" src="https://www.advantour.com/img/japan/images/index.jpg" alt="">
+            <p id="mensajePais">Desliza para saberlo</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarAnimal() {
+            document.getElementById('mensajeAnimal').textContent = "Mi animal favorito es el perro.";
+        }
+
+        document.getElementById('comida').addEventListener('mouseover', function() {
+            document.getElementById('mensajeComida').textContent = "Mi comida favorita es la pizza.";
+        });
+
+        document.getElementById('pelicula').addEventListener('dblclick', function() {
+            document.getElementById('mensajePelicula').textContent = "Mi película favorita es Rapidos y Furiosos.";
+        });
+
+        function mostrarPersona() {
+            document.getElementById('mensajePersona').textContent = "Admiro mucho a mis padres.";
+        }
+
+        document.getElementById('pais').addEventListener('mousemove', function() {
+            document.getElementById('mensajePais').textContent = "Me gustaría visitar Japón algún día.";
+        });
+    </script>
+
+</body>
+</html>
